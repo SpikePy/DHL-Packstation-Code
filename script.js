@@ -1,15 +1,25 @@
 function generate()
 {
-  postNumber = postNumber.value
-  console.log(`Post Number: ${postNumber}`)
+  if (document.getElementById("postNumber").value == '')
+  {
+    htmlResultHeadline.innerHTML  = 'Input a valid post number'
+    htmlResult.innerHTML          = ''
+    htmlResultBarcode.innerHTML   = ''
+  }
+  else
+  {
+    postNumber = document.getElementById("postNumber").value
+    console.log(`Post Number: ${postNumber}`)
 
-  // Multiply postNumber with 631
-  var postNumberProduct = postNumber * 631
-  console.log(`Post Number * 631: ${postNumberProduct}`)
+    // Multiply postNumber with 631
+    var postNumberProduct = postNumber * 631
+    console.log(`Post Number * 631: ${postNumberProduct}`)
 
-  code = barcodeNumber(postNumberProduct)
-  htmlResult.innerHTML  = `Result: ${code}`
-  htmlBarcode.innerHTML  = `<image title="ITF-14 barcode" src="http://barcodegenerator.online/barcode.asp?bc1=${code}&bc2=28&bc3=3.5&bc4=1.2&bc5=1&bc6=1&bc7=Arial&bc8=15&bc9=1">`
+    code = barcodeNumber(postNumberProduct)
+    htmlResultHeadline.innerHTML  = 'Result'
+    htmlResult.innerHTML          = code
+    htmlResultBarcode.innerHTML   = `<image title="ITF-14 barcode" src="http://barcodegenerator.online/barcode.asp?bc1=${code}&bc2=28&bc3=5000&bc4=1000&bc5=0&bc6=1&bc7=Arial&bc8=15&bc9=3">`
+  }
 }
 
 function luhnMod10(number)

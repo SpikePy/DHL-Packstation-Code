@@ -1,7 +1,29 @@
-input {
-  text-align: right;
+html {
+  font-family: sans-serif;
+  text-align: center;
 }
 
-#result {
-  font-weight: bold;
+input {
+  text-align: center;
+  border: 1px solid;
+  background: gainsboro;
+  padding: .3rem;
+  padding-right: 0;
+  margin-right: -.3rem;
+  -moz-appearance: textfield;
+}
+input:hover {
+    background-color: rgb(236, 255, 208);
+}
+
+button {
+  border: 1px solid;
+  padding: .3rem;
+}
+button:hover {
+  background-color: rgb(236, 255, 208);
+}
+
+img {
+  width: 30rem;
 }
