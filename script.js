@@ -8,7 +8,8 @@ function generate()
   console.log(`Post Number * 631: ${postNumberProduct}`)
 
   code = barcodeNumber(postNumberProduct)
-  htmlResult.innerHTML  = `Result: <a href="http://barcodegenerator.online/indexbarcode.asp?bc1=${code}&bc2=28&bc3=3.5&bc4=1.2&bc9=1&bc5=11&bc6=11&bc7=Arial&bc8=15">${code}</a> (Click the link to generate the ITF-14 Code)`
+  htmlResult.innerHTML  = `Result: ${code}`
+  htmlBarcode.innerHTML  = `<image title="ITF-14 barcode" src="http://barcodegenerator.online/barcode.asp?bc1=${code}&bc2=28&bc3=3.5&bc4=1.2&bc5=1&bc6=1&bc7=Arial&bc8=15&bc9=1">`
 }
 
 function luhnMod10(number)
