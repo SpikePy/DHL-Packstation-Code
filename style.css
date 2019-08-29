@@ -1,3 +1,7 @@
 input {
-  text-align: right; 
+  text-align: right;
+}
+
+#result {
+  font-weight: bold;
 }
