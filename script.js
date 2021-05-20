@@ -57,7 +57,7 @@ function luhnMod10(number)
   }
   console.log(`Sum: ${sum}`)
   // Return only the last digit
-  result = sum % 10
+  result = (10 - sum) % 10
   console.log(`Return: ${result}`)
   return result
 }
